@@ -1,25 +1,18 @@
-import * as React from 'react' 
-import Navbar from '../components/Navbar'
-import { Route, Router, Switch } from 'react-router-dom'
-import Home from '../components/Home'
-import Contacts from '../components/Contacts'
-
+import "@fontsource/roboto/300.css";
+import "@fontsource/roboto/400.css";
+import "@fontsource/roboto/500.css";
+import "@fontsource/roboto/700.css";
+import Home from './components/Home';
+import React from 'react';
+import { ThemeProvider } from '@mui/material/styles';
+import customtheme from "./styles/Theme";
 
 const App = () => {
   return (
-    <>
-      <Router>
-        <Navbar />
-        <Router>
-            <Switch>
-              <Route path='/' Component={Home} exact> <Home /> </Route>
-              <Route path='/contacts' Component={Contacts} exact> <Contacts /> </Route>
-            </Switch>
-        </Router>
-      </Router>
-    </>
+    <ThemeProvider theme={customtheme}>
+      <Home />
+    </ThemeProvider>
+  );
+};
 
-  )
-}
-
-export default App
+export default App;

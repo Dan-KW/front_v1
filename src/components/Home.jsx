@@ -1,9 +1,9 @@
 import React from "react";
-
+import Navbar from "./Navbar"
 const Home = () => {
     return (
         <section className="hero">
-            <h1> Welcome to Home page</h1>;
+           <Navbar/>
         </section>
     )
 }
