@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import {
   AppBar,
   Button,
+  Container,
+  Stack,
   Tab,
   Tabs,
   Toolbar,
@@ -19,42 +21,50 @@ const Navbar = () => {
   return (
     <React.Fragment>
       <AppBar elevation={0}>
-        <Toolbar>
-          <AddBusinessRoundedIcon sx={{ transform: "scale(2)" }} />
-          {isMatch ? (
-            <>
-              <Typography sx={{ fontSize: "2rem", paddingLeft: "10%" }}>
-                PetaBeba
-              </Typography>
-              <DrawerComp />
-            </>
-          ) : (
-            <>
-              <Typography sx={{fontSize: "2rem", paddingLeft: "10%"}}>
-                PataBeba
-              </Typography>
-              <Tabs
-                sx={{ marginLeft: "auto" }}
-                indicatorColor="secondary"
-                textColor="inherit"
-                value={value}
-                onChange={(e, value) => setValue(value)}
-              >
-              <Tab label="Loads" />
-              <Tab label="Trucks" />
-              <Tab label="For Freight Owners" />
-              <Tab label="For Carriers" />
-              <Tab label="Tenders" />
-              </Tabs>
-              <Button sx={{ marginLeft: "auto" }} variant="contained">
-                Login
-              </Button>
-              <Button sx={{ marginLeft: "10px" }} variant="contained">
-                SignUp
-              </Button>
-            </>
-          )}
-        </Toolbar>
+        <Container>
+          <Toolbar >
+            {/* <AddBusinessRoundedIcon sx={{ transform: "scale(2)" }} /> */}
+            {isMatch ? (
+              <>
+                <Typography sx={{ fontSize: "2rem", paddingLeft: "10%" }}>
+                  PetaBeba
+                </Typography>
+                <DrawerComp />
+              </>
+            ) : (
+              <>
+                {/* <Typography sx={{ fontSize: "2rem", paddingLeft: "10%" }}> */}
+                {/* </Typography> */}
+                <Typography sx={{ fontSize: "2rem", paddingLeft: "0%" }}>
+                    PataBeba
+                  </Typography>
+                <Typography>
+                  <Tabs
+                    sx={{ marginLeft: "auto" }}
+                    indicatorColor="secondary"
+                    textColor="inherit"
+                    value={value}
+                    onChange={(e, value) => setValue(value)}
+                  >
+                    <Tab label="Loads" />
+                    <Tab label="Trucks" />
+                    <Tab label="For Freight Owners" />
+                    <Tab label="For Carriers" />
+                    <Tab label="Tenders" />
+                  </Tabs>
+                </Typography>
+                <Stack spacing={2} direction="row" >
+                  <Button variant="outlined" color="success" size="large">
+                    Login
+                  </Button>
+                  <Button variant="outlined" color="success" size="large">
+                    Sign Up
+                  </Button>
+                </Stack>
+              </>
+            )}
+          </Toolbar>
+        </Container>
       </AppBar>
     </React.Fragment>
   );
