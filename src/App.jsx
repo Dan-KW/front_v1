@@ -10,14 +10,9 @@ import customtheme from "./styles/Theme";
 const App = () => {
   console.log("Hello");
   return (
-/*     <ThemeProvider theme={customtheme}>
-      <Home /> 
-      <h1>Hello World</h1>
-    </ThemeProvider> */
-    <div>
-     <h1>Hello World</h1>
-    </div>
-
+    <ThemeProvider theme={customtheme}>
+      <Home />
+    </ThemeProvider>
   );
 };
 

@@ -1,10 +1,11 @@
 import React from "react";
 import Navbar from "./Navbar"
+import Footer from "./Footer"
 const Home = () => {
     return (
         <section className="hero">
-            {/* <Navbar/> */}
-            <h1>Hello World</h1>
+            <Navbar />
+            <Footer />
         </section>
     )
 }

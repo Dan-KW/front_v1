@@ -10,7 +10,7 @@ const myTheme = createTheme({
       textTransform: 'none',
     },
   },
-  components: {
+/*   components: {
     MuiButton: {
       styleOverrides: {
         root: {
@@ -18,6 +18,6 @@ const myTheme = createTheme({
         },
       }, 
     }, 
-  },
+  }, */
 });
 export default createTheme(myTheme);
